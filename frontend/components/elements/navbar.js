@@ -19,7 +19,7 @@ const Navbar = ({ navbar, pageContext }) => {
   return (
     <>
       {/* The actual navbar */}
-      <nav className="border-gray-200 border-b-2 py-6 sm:py-2">
+      <nav className="py-6 sm:py-2 bg-green-muted">
         <div className="container flex flex-row items-center justify-between">
 
           <Link href="/">
