@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_features_carousels",
+  "info": {
+    "displayName": "Features Carousel",
+    "icon": "grip-horizontal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "CTAlinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.button-link"
+    },
+    "carousel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.features-carousel-item"
+    }
+  }
+}

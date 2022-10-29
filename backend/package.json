@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "@strapi/plugin-color-picker": "^4.4.5",
+    "@strapi/plugin-graphql": "^4.0.0",
+    "@strapi/plugin-i18n": "4.4.5",
+    "@strapi/plugin-users-permissions": "4.4.5",
+    "@strapi/strapi": "4.4.5",
+    "better-sqlite3": "7.4.6",
+    "lodash.set": "^4.3.2"
+  },
+  "name": "backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "f2e9face-de75-4413-b5ec-93f5ed741e53",
+    "template": "@strapi/template-corporate@^1.0.0",
+    "starter": "@strapi/starter-next-corporate"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_big_quotes",
+  "info": {
+    "displayName": "Big Quote",
+    "icon": "quote-right"
+  },
+  "options": {},
+  "attributes": {
+    "citation": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_app_store_ctas",
+  "info": {
+    "displayName": "App Store CTA",
+    "icon": "store"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "appStoreLink": {
+      "type": "string"
+    },
+    "playStoreLink": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

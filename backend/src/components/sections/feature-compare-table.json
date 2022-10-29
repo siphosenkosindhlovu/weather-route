@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_feature_compare_tables",
+  "info": {
+    "displayName": "Feature Compare Table",
+    "icon": "border-all"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "feature": {
+      "displayName": "Feature Compare Table Row",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-compare-table-row"
+    }
+  }
+}

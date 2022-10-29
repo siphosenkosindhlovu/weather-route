@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_links_image_buttons",
+  "info": {
+    "displayName": "Image Button",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

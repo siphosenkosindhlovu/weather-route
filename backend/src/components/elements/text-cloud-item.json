@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_text_cloud_items",
+  "info": {
+    "displayName": "textCloudItem",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "half",
+        "two thirds",
+        "full"
+      ]
+    },
+    "align": {
+      "type": "enumeration",
+      "enum": [
+        "center",
+        "left",
+        "right"
+      ]
+    },
+    "isLighter": {
+      "type": "boolean"
+    }
+  }
+}

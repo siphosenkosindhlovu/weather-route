@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_feature_compare_table_rows",
+  "info": {
+    "displayName": "Feature Compare Table Row",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "free": {
+      "type": "boolean"
+    },
+    "subscription": {
+      "type": "boolean"
+    },
+    "otherApps": {
+      "type": "boolean"
+    }
+  }
+}

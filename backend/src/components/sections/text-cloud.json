@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_text_clouds",
+  "info": {
+    "displayName": "Text Cloud",
+    "icon": "braille"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "textLines": {
+      "displayName": "textCloudItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.text-cloud-item"
+    }
+  }
+}
