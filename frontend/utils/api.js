@@ -229,6 +229,16 @@ export async function getPageData({ slug, locale, preview }) {
                     }
                     title
                   }
+                  ... on ComponentSectionsFeatureCompareTable {
+                    id
+                    title
+                    features {
+                      name
+                      free
+                      subscription
+                      otherApps
+                    }
+                  }
                   ... on ComponentSectionsLargeVideo {
                     id
                     description

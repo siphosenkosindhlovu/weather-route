@@ -11,6 +11,7 @@ import LeadForm from "./sections/lead-form"
 import FeaturesCarousel from "./sections/features-carousel"
 import BigQuote from "./sections/big-quote"
 import TextCloud from "./sections/text-cloud"
+import FeaturesCompareTable from "./sections/features-compare-table"
 // Map Strapi sections to section components
 const sectionComponents = {
   ComponentSectionsHero: Hero,
@@ -24,7 +25,8 @@ const sectionComponents = {
   ComponentSectionsLeadForm: LeadForm,
   ComponentSectionsFeaturesCarousel: FeaturesCarousel,
   ComponentSectionsBigQuote: BigQuote,
-  ComponentSectionsTextCloud: TextCloud
+  ComponentSectionsTextCloud: TextCloud,
+  ComponentSectionsFeatureCompareTable: FeaturesCompareTable
 }
 
 // Display a section individually
