@@ -27,7 +27,7 @@ const FeaturesCompareTable = ({ data }) => {
                     <tbody className="bg-gray-50 border border-gray-200 text-gray-600">
                         {
                             data.features.map((feature, i) => (
-                                <tr className="border-b border-gray-200">
+                                <tr className="border-b border-gray-200" key={i}>
                                     <td className="border border-gray-200 px-8 py-3">
                                         {feature.name}
                                     </td>

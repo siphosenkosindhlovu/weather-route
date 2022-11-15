@@ -11,7 +11,7 @@ const FeaturesCarousel = ({ data }) => {
     return (
         <div className="overflow-x-hidden">
             <div className="container xl:max-w-[75rem] my-16">
-                <div className="md:grid grid-cols-3 gap-20">
+                <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-20">
                     <div className="col-start-1 col-end-2 flex flex-col py-5">
                         <h2 className="font-bold text-4xl mb-7 text-green-primary">{data.title}</h2>
                         <Markdown className="text-gray-600">{data.description}</Markdown>
@@ -28,7 +28,7 @@ const FeaturesCarousel = ({ data }) => {
                     <div className="col-start-2 col-end-4">
                         <Swiper
                             spaceBetween={20}
-                            slidesPerView={3}
+                            slidesPerView={2}
                             onSlideChange={() => console.log('slide change')}
                             onSwiper={(swiper) => console.log(swiper)}
                             className="overflow-visible"
@@ -36,8 +36,8 @@ const FeaturesCarousel = ({ data }) => {
                         >
                             {
                                 data.carousel.map((item, i) => (
-                                    <SwiperSlide key={i} style={{ height: "auto" }}>
-                                        <div style={{ backgroundColor: item.cardBgColor }} className={`${i % 2 !== 0 ? 'mt-6' : 'mt-0'} py-5 px-7 flex flex-col h-full`}>
+                                    <SwiperSlide key={i} style={{ height: "auto" }} className="h-auto w-64">
+                                        <div style={{ backgroundColor: item.cardBgColor }} className={`${i % 2 !== 0 ? 'mt-6' : 'mt-0'} py-5 px-7 flex flex-col h-full w-[250px]`}>
                                             <h3 className="text-xl font-bold mb-3">
                                                 {item.title}
                                             </h3>
