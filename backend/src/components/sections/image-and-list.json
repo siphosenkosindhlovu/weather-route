@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_image_and_lists",
+  "info": {
+    "displayName": "Image and List",
+    "icon": "th-list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "list": {
+      "displayName": "List Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list-item"
+    }
+  }
+}

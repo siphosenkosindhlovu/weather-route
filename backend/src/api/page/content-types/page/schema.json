@@ -54,7 +54,8 @@
         "sections.big-quote",
         "sections.app-store-cta",
         "sections.feature-compare-table",
-        "sections.text-cloud"
+        "sections.text-cloud",
+        "sections.image-and-list"
       ],
       "pluginOptions": {
         "i18n": {
