@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react"
 import { useRouter } from "next/router"
 import PropTypes from "prop-types"
 import Link from "next/link"
-import { getLocalizedPage } from "utils/localize"
+import { getLocalizedPage, localizePath } from "utils/localize"
 
 import Cookies from "js-cookie"
 import { MdExpandMore } from "react-icons/md"
@@ -86,7 +86,7 @@ const LocaleSwitch = ({ pageContext }) => {
               >
                 <p
                   onClick={() => handleLocaleChange(locale)}
-                  className="capitalize hover:bg-primary-50 hover:text-primary-600  cursor-pointer p-2 rounded-md text-center hover:text-primary-600"
+                  className="capitalize hover:bg-primary-50 cursor-pointer p-2 rounded-md text-center hover:text-primary-600"
                 >
                   {locale}
                 </p>
