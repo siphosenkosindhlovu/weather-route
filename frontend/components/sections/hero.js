@@ -1,15 +1,16 @@
 import Markdown from "react-markdown"
 import { getButtonAppearance } from "utils/button"
 import ButtonLink from "../elements/button-link"
+import CustomLink from "../elements/custom-link"
 import NextImage from "../elements/image"
 
 const Hero = ({ data }) => {
   return (
-    <div className=" bg-green-muted">
+    <div className="bg-green-muted">
 
       <div className="container xl:max-w-[75rem] flex flex-col md:flex-row md:items-center justify-between py-12">
         {/* Left column for content */}
-        <div className="flex-1 sm:pr-8">
+        <div className="flex-1 sm:pr-8 flex flex-col h-full">
           {/* Hero section label */}
           <p className="uppercase tracking-wide font-semibold">{data.label}</p>
           {/* Big title */}
@@ -17,12 +18,23 @@ const Hero = ({ data }) => {
           {/* Description paragraph */}
           <p className="text-2xl font-medium mb-6">{data.description}</p>
           {/* Buttons row */}
+          <div className="flex flex-row flex-wrap gap-4 mt-auto">
+            {data.appStoreLinks.map((link) => (
+              <CustomLink
+                link={link}
+                key={link.id}
+              >
+                <NextImage width={120} height={135} media={link.image} />
+              </CustomLink>
+            ))}
+          </div>
           <div className="flex flex-row flex-wrap gap-4">
             {data.buttons.map((button) => (
               <ButtonLink
                 button={button}
                 appearance={getButtonAppearance(button.type, "light")}
                 key={button.id}
+                showArrow={true}
               />
             ))}
           </div>

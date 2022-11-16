@@ -1,29 +1,53 @@
 {
   "collectionName": "components_sections_app_store_ctas",
   "info": {
-    "displayName": "App Store CTA",
-    "icon": "store"
+    "displayName": "Action CTA",
+    "icon": "store",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "subtitle": {
-      "type": "text"
-    },
-    "appStoreLink": {
+    "label": {
       "type": "string"
     },
-    "playStoreLink": {
+    "description": {
       "type": "string"
     },
-    "backgroundImage": {
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.button-link"
+    },
+    "appStoreLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.image-button"
+    },
+    "imageLayout": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "fullBleed",
+        "background"
+      ]
+    },
+    "textColor": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ]
     }
   }
 }

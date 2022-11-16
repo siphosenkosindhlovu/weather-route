@@ -12,7 +12,6 @@ import { getLocalizedPaths } from "utils/localize"
 
 const DynamicPage = ({ sections, metadata, preview, global, pageContext }) => {
   const router = useRouter()
-
   // Check if the required data was provided
   if (!router.isFallback && !sections?.length) {
     return <ErrorPage statusCode={404} />
@@ -73,7 +72,6 @@ export async function getStaticPaths(context) {
 
 export async function getStaticProps(context) {
   const { params, locale, locales, defaultLocale, preview = null } = context
-
   const globalLocale = await getGlobalData(locale)
   // Fetch pages. Include drafts if preview mode is on
   const pageData = await getPageData({
@@ -89,7 +87,6 @@ export async function getStaticProps(context) {
 
   // We have the required page data, pass it to the page component
   const { contentSections, metadata, localizations, slug } = pageData.attributes
-
   const pageContext = {
     locale,
     locales,
@@ -99,7 +96,6 @@ export async function getStaticProps(context) {
   }
 
   const localizedPaths = getLocalizedPaths(pageContext)
-
   return {
     props: {
       preview,

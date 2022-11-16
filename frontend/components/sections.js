@@ -12,6 +12,8 @@ import FeaturesCarousel from "./sections/features-carousel"
 import BigQuote from "./sections/big-quote"
 import TextCloud from "./sections/text-cloud"
 import FeaturesCompareTable from "./sections/features-compare-table"
+import ImageAndList from "./sections/image-and-list"
+import ActionCTA from "./sections/action-cta"
 // Map Strapi sections to section components
 const sectionComponents = {
   ComponentSectionsHero: Hero,
@@ -26,7 +28,9 @@ const sectionComponents = {
   ComponentSectionsFeaturesCarousel: FeaturesCarousel,
   ComponentSectionsBigQuote: BigQuote,
   ComponentSectionsTextCloud: TextCloud,
-  ComponentSectionsFeatureCompareTable: FeaturesCompareTable
+  ComponentSectionsFeatureCompareTable: FeaturesCompareTable,
+  ComponentSectionsImageAndList: ImageAndList,
+  ComponentSectionsAppStoreCta: ActionCTA
 }
 
 // Display a section individually

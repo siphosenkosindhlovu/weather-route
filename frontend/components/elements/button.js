@@ -10,6 +10,7 @@ const Button = ({
   handleClick,
   loading = false,
   type,
+  showArrow
 }) => {
   return (
     <button link={button} onClick={handleClick} type={type}>
@@ -27,17 +28,17 @@ const Button = ({
           },
           // Specific to when the button is fully dark
           {
-            "bg-primary-600 text-white border-primary-600":
+            "bg-green-primary text-white border-green-primary":
               appearance === "dark",
           },
           // Specific to when the button is dark outlines
           {
-            "text-primary-600 border-primary-600":
+            "text-green-primary border-green-primary":
               appearance === "dark-outline",
           },
           // Specific to when the button is fully white
           {
-            "bg-white text-primary-600 border-white": appearance === "white",
+            "bg-white text-green-primary border-white": appearance === "white",
           },
           // Specific to when the button is white outlines
           {

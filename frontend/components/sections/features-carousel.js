@@ -7,6 +7,7 @@ import ButtonLink from "../elements/button-link"
 import { getButtonAppearance } from "utils/button"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import image from "next/image"
+import { getStrapiMedia } from "utils/media"
 const FeaturesCarousel = ({ data }) => {
     return (
         <div className="overflow-x-hidden">
@@ -21,6 +22,7 @@ const FeaturesCarousel = ({ data }) => {
                                     button={button}
                                     appearance={getButtonAppearance(button.type, "light")}
                                     key={button.id}
+                                    showArrow={true}
                                 />
                             ))}
                         </div>
@@ -28,16 +30,14 @@ const FeaturesCarousel = ({ data }) => {
                     <div className="col-start-2 col-end-4">
                         <Swiper
                             spaceBetween={20}
-                            slidesPerView={2}
-                            onSlideChange={() => console.log('slide change')}
-                            onSwiper={(swiper) => console.log(swiper)}
-                            className="overflow-visible"
+                            slidesPerView={"auto"}
                             style={{ clipPath: "inset(-100vw -100vw -100vw 0)", overflow: "visible" }}
+                            className="features-carousel"
                         >
                             {
                                 data.carousel.map((item, i) => (
-                                    <SwiperSlide key={i} style={{ height: "auto" }} className="h-auto w-64">
-                                        <div style={{ backgroundColor: item.cardBgColor }} className={`${i % 2 !== 0 ? 'mt-6' : 'mt-0'} py-5 px-7 flex flex-col h-full w-[250px]`}>
+                                    <SwiperSlide key={i}>
+                                        <div style={{ backgroundColor: item.cardBgColor }} className={`${i % 2 !== 0 ? 'mt-6' : 'mt-0'} py-5 px-7 flex flex-col h-full w-64`}>
                                             <h3 className="text-xl font-bold mb-3">
                                                 {item.title}
                                             </h3>

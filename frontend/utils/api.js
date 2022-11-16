@@ -1,3 +1,4 @@
+import { data } from "autoprefixer"
 import qs from "qs"
 
 export function getStrapiURL(path) {
@@ -47,7 +48,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
  * @param {boolean} options.preview router isPreview value
  */
 export async function getPageData({ slug, locale, preview }) {
-  console.log({ slug })
+
   // Find the pages that match this slug
   const gqlEndpoint = getStrapiURL("/graphql")
   const pagesRes = await fetch(gqlEndpoint, {
@@ -104,6 +105,31 @@ export async function getPageData({ slug, locale, preview }) {
                 }
                 contentSections {
                   __typename
+                  ... on ComponentSectionsAppStoreCta {
+                    id
+                    title
+                    description
+                    picture {
+                      ...FileParts
+                    }
+                    imageLayout
+                    textColor
+                    appStoreLinks {
+                      id
+                      image {
+                        ...FileParts
+                      }
+                      title
+                      url
+                    }
+                    buttons {
+                      id
+                      url
+                      newTab
+                      text
+                      type
+                    }
+                  }
                   ... on ComponentSectionsTextCloud {
                     id
                     title
@@ -165,6 +191,14 @@ export async function getPageData({ slug, locale, preview }) {
                     description
                     label
                     smallTextWithLink
+                    appStoreLinks {
+                      id
+                      title
+                      image {
+                        ...FileParts
+                      }
+                      url
+                    }
                     picture {
                       ...FileParts
                     }
@@ -281,6 +315,16 @@ export async function getPageData({ slug, locale, preview }) {
                     }
                     title
                   }
+                  ... on ComponentSectionsImageAndList {
+                    id
+                    title
+                    list {
+                      text
+                    }
+                    image {
+                      ...FileParts
+                    }
+                  }
                 }
               }
             }
@@ -296,12 +340,10 @@ export async function getPageData({ slug, locale, preview }) {
   })
 
   const pagesData = await pagesRes.json()
-  console.log({ pagesData: pagesData.errors })
   // Make sure we found something, otherwise return null
   if (pagesData.data?.pages == null || pagesData.data.pages.length === 0) {
     return null
   }
-  console.log({ pagesData })
   // Return the first item since there should only be one result per slug
   return pagesData.data.pages.data[0]
 }
@@ -309,13 +351,15 @@ export async function getPageData({ slug, locale, preview }) {
 // Get site data from Strapi (metadata, navbar, footer...)
 export async function getGlobalData(locale) {
   const gqlEndpoint = getStrapiURL("/graphql")
-  const globalRes = await fetch(gqlEndpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      query: `
+  try {
+
+    const globalRes = await fetch(gqlEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: `
         fragment FileParts on UploadFileEntityResponse {
           data {
             id
@@ -390,12 +434,17 @@ export async function getGlobalData(locale) {
           }
         }      
       `,
-      variables: {
-        locale,
-      },
-    }),
-  })
+        variables: {
+          locale,
+        },
+      }),
+    })
 
-  const global = await globalRes.json()
-  return global.data.global
+
+    const global = await globalRes.json()
+    if (global.data.errors) throw global.data.errors
+    return global.data.global
+  } catch (e) {
+    console.log(e)
+  }
 }

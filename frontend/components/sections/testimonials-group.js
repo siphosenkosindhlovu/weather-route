@@ -66,10 +66,8 @@ const TestimonialsGroup = ({ data }) => {
         {data.testimonials.length > 1 && (
           <Swiper
             spaceBetween={20}
-            slidesPerView={4}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-            className="overflow-visible"
+            slidesPerView={"auto"}
+            className="overflow-visible testimonials-carousel"
           >
             {
               data.testimonials.map((item, i) => (

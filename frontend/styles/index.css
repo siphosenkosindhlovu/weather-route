@@ -61,3 +61,11 @@ html {
 .swiper-wrapper {
   @apply overflow-visible;
 }
+
+.features-carousel .swiper-slide {
+  @apply w-64;
+}
+
+.testimonials-carousel .swiper-slide {
+  @apply w-52;
+}

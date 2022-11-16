@@ -63,12 +63,12 @@ const LocaleSwitch = ({ pageContext }) => {
     <div ref={select} className="relative ml-4 ">
       <button
         type="button"
-        className="hover:bg-primary-50 hover:text-primary-600 focus:bg-primary-50 focus:text-primary-600 focus:outline-none flex items-center justify-between px-2 py-2 cursor-pointer h-full rounded-md w-20"
+        className="hover:bg-primary-50 hover:text-green-primary focus:bg-primary-50 focus:text-green-primary focus:outline-none flex items-center justify-between px-2 py-2 cursor-pointer h-full rounded-md w-20"
         onClick={() => setShowing(!showing)}
       >
         <WorldIcon />
         <span className="capitalize">{locale}</span>
-        <MdExpandMore className="ml-1 text-primary-600" />
+        <MdExpandMore className="ml-1 text-green-primary" />
       </button>
       <div
         className={`w-full bg-white p-1 mt-1 shadow-lg rounded-md ${showing ? "absolute" : "hidden"
@@ -86,7 +86,7 @@ const LocaleSwitch = ({ pageContext }) => {
               >
                 <p
                   onClick={() => handleLocaleChange(locale)}
-                  className="capitalize hover:bg-primary-50 cursor-pointer p-2 rounded-md text-center hover:text-primary-600"
+                  className="capitalize hover:bg-primary-50 cursor-pointer p-2 rounded-md text-center hover:text-green-primary"
                 >
                   {locale}
                 </p>
