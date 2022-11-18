@@ -1,12 +1,14 @@
 {
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.2",
     "@strapi/plugin-color-picker": "^4.4.5",
     "@strapi/plugin-graphql": "^4.0.0",
     "@strapi/plugin-i18n": "4.4.5",
     "@strapi/plugin-users-permissions": "4.4.5",
     "@strapi/strapi": "4.4.5",
     "better-sqlite3": "7.4.6",
-    "lodash.set": "^4.3.2"
+    "lodash.set": "^4.3.2",
+    "strapi-plugin-sitemap": "^2.0.8"
   },
   "name": "backend",
   "private": true,

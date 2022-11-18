@@ -12,7 +12,7 @@
 
 html {
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   @apply text-gray-900;
 }
 
@@ -24,7 +24,7 @@ html {
 
 @media screen and (min-width: 768px) {
   html {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -40,13 +40,8 @@ html {
 }
 
 .title {
-  @apply leading-snug font-semibold;
-}
-
-@media (min-width: 768px) {
-  .title {
-    @apply text-5xl;
-  }
+  line-height: 1.2;
+  @apply leading-snug font-semibold text-4xl;
 }
 
 .with-arrow:after {

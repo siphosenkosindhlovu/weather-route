@@ -22,6 +22,11 @@
     },
     "smallText": {
       "type": "string"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.social-link"
     }
   }
 }

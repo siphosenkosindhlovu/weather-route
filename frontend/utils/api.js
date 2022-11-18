@@ -287,6 +287,7 @@ export async function getPageData({ slug, locale, preview }) {
                   ... on ComponentSectionsRichText {
                     id
                     content
+                    title
                   }
                   ... on ComponentSectionsPricing {
                     id
@@ -427,6 +428,11 @@ export async function getGlobalData(locale) {
                       newTab
                       text
                     }
+                  }
+                  socialLinks {
+                    id
+                    url
+                    platform
                   }
                 }
               }
